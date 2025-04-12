@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>John Doe</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: red;
+            border-radius: 0px;
+            padding: 30px;
+            box-shadow: 0 7px 9px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px;
+
+        }
+        .follow-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+
+        }
+        .follow-btn:hover {
+            background-color: #0056b3;
+        }
+        .follow-btn.unfollow {
+            background-color: #6c757d;
+        }
+        .follow-btn.unfollow:hover {
+            background-color: #5a6268;
+        }
+
+    </style>
+</head>
+
+<body>
+     <div class="card">
+         <img src=C:\\Users\\DELL\\Downloads\\profile-icon-design-free-vector.jpg">
+        <h2>John Doe</h2>
+         <h3>Passionate about web development and design.</h3>
+        <p class="job-title">Web Developer</p>
+        <p class="location">USA</p>
+
+        <button class="follow-btn" onclick="toggleFollow()">Follow</button>
+
+         <script>
+
+        function toggleFollow() {
+            alert("You click the follow button!")
+            const button = document.querySelector('.follow-btn');
+
+
+            if (button.textContent === "Follow") {
+                button.textContent = "Unfollow";
+                button.classList.add("unfollow");
+            } else {
+                button.textContent = "Follow";
+                button.classList.remove("unfollow");
+            }
+        }
+    </script>
+
+
+
+     </div>
+
+</body>
